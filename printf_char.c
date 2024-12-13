@@ -3,13 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   printf_char.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
+/*   By: abtouait <abtouait@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 01:38:20 by abtouait          #+#    #+#             */
-/*   Updated: 2024/12/12 01:39:06 by abtouait         ###   ########.fr       */
+/*   Updated: 2024/12/13 20:40:41 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+int	ft_printf_char(int a)
+{
+	write(1, &a, 1);
+	return (1);
+}
 
