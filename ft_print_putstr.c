@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf_char.c                                      :+:      :+:    :+:   */
+/*   ft_print_putstr.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abtouait <abtouait@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/12 01:38:20 by abtouait          #+#    #+#             */
-/*   Updated: 2024/12/13 20:40:41 by abtouait         ###   ########.fr       */
+/*   Created: 2024/12/13 23:18:37 by abtouait          #+#    #+#             */
+/*   Updated: 2024/12/13 23:28:58 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_char(int a)
+void	ft_print_putstr(char *str)
 {
-	write(1, &a, 1);
-	return (1);
-}
+	size_t	i;
 
+	i = 0;
+	while (str[i] != '\0')
+	{
+		ft_printf_putchar(str[i]);
+		i++;	
+	}
+}
