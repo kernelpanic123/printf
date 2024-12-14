@@ -6,7 +6,7 @@
 /*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 20:20:14 by abtouait          #+#    #+#             */
-/*   Updated: 2024/12/13 23:28:39 by abtouait         ###   ########.fr       */
+/*   Updated: 2024/12/14 16:12:17 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 # include <unistd.h>
 # include <stdio.h>
 
-void	ft_printf_putchar(char  a);
-void	ft_print_putstr(char *str);
+int		ft_printf_putchar(char  a);
+int		ft_print_putstr(char *str);
+int		ft_print_dec(int nb);
+int		ft_print_unsigned(unsigned int c);
 
 #endif

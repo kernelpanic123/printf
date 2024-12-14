@@ -1,19 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_putchar.c                                 :+:      :+:    :+:   */
+/*   ft_print_unsigned.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/12 01:38:20 by abtouait          #+#    #+#             */
-/*   Updated: 2024/12/14 15:01:59 by abtouait         ###   ########.fr       */
+/*   Created: 2024/12/14 15:58:00 by abtouait          #+#    #+#             */
+/*   Updated: 2024/12/14 16:16:16 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_putchar(char a)
+static	int	ft_length_positive(unsigned int c)
 {
-	write(1, &a, 1);
-	return (1);
+	size_t	i;
+
+	i = 0;
+	if (c == 0)
+		return (1);
+	while (c > 0)
+	{
+		c = c / 10;
+		i++;
+	}
+	return (i);
+}
+
+int	ft_print_unsigned(unsigned int c)
+{
+	if (c > 9)
+		ft_print_unsigned(c / 10);
+	ft_printf_putchar(c % 10 + '0');
+	return (ft_length_positive(c));	
 }

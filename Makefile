@@ -6,13 +6,13 @@
 #    By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/13 20:23:16 by abtouait          #+#    #+#              #
-#    Updated: 2024/12/13 23:28:50 by abtouait         ###   ########.fr        #
+#    Updated: 2024/12/14 16:12:35 by abtouait         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-SRC = ft_print_putchar.c ft_print_putstr.c
+SRC = ft_print_putchar.c ft_print_putstr.c ft_print_dec.c ft_print_unsigned.c
 
 CFLAGS = -Wall -Wextra -Werror
 
