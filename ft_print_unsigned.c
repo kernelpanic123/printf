@@ -6,7 +6,7 @@
 /*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 15:58:00 by abtouait          #+#    #+#             */
-/*   Updated: 2024/12/14 16:16:16 by abtouait         ###   ########.fr       */
+/*   Updated: 2024/12/14 19:07:39 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ int	ft_print_unsigned(unsigned int c)
 {
 	if (c > 9)
 		ft_print_unsigned(c / 10);
-	ft_printf_putchar(c % 10 + '0');
-	return (ft_length_positive(c));	
+	ft_print_putchar(c % 10 + '0');
+	return (ft_length_positive(c));
 }

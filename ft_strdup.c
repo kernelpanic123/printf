@@ -1,52 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_hex_l.c                                   :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/14 16:20:42 by abtouait          #+#    #+#             */
-/*   Updated: 2024/12/14 19:09:03 by abtouait         ###   ########.fr       */
+/*   Created: 2024/12/14 20:03:16 by abtouait          #+#    #+#             */
+/*   Updated: 2024/12/14 20:03:34 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_printf.c"
 
-static	int	ft_length_hex(int c)
+char	*ft_strdup(const	char *s1)
 {
-	size_t	i;
+	int		i;
+	char	*s2;
 
 	i = 0;
-	if (c == 0)
-		return (1);
-	while (c > 0)
+	while (s1[i] != '\0')
 	{
-		c = c / 16;
 		i++;
 	}
-	return (i);
-}
-
-void	ft_convert_hex_l(unsigned int a)
-{
-	if (a >= 16)
+	s2 = malloc(sizeof(char) * (i + 1));
+	if (!s2)
 	{
-		ft_convert_hex_l(a / 16);
-		ft_convert_hex_l(a % 16);
+		return (NULL);
 	}
-	else
+	i = 0;
+	while (s1[i] != '\0')
 	{
-		if (a <= 9)
-			ft_print_unsigned(a);
-		else
-		{
-			ft_print_putchar((a - 10 + 'a'));
-		}
+		s2[i] = s1[i];
+		i++;
 	}
-}
-
-int	ft_print_hex_l(unsigned int a)
-{
-	ft_convert_hex_l(a);
-	return (ft_length_hex(a));
+	s2[i] = '\0';
+	return (s2);
 }

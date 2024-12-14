@@ -6,13 +6,13 @@
 #    By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/13 20:23:16 by abtouait          #+#    #+#              #
-#    Updated: 2024/12/14 16:12:35 by abtouait         ###   ########.fr        #
+#    Updated: 2024/12/14 20:11:21 by abtouait         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-SRC = ft_print_putchar.c ft_print_putstr.c ft_print_dec.c ft_print_unsigned.c
+SRC = ft_print_putchar.c ft_print_putstr.c ft_print_dec.c ft_print_unsigned.c ft_print_hex_l.c ft_print_hex_u.c ft_print_ptr.c ft_printf.c ft_print_pourcent.c ft_itoa.c ft_strdup.c
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -25,7 +25,6 @@ all:	$(NAME)
 
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
-	chmod 700 $(NAME)
 
 clean:
 	rm -f *.o

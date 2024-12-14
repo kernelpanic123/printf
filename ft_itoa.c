@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_dec.c                                     :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/14 15:11:44 by abtouait          #+#    #+#             */
-/*   Updated: 2024/12/14 20:06:26 by abtouait         ###   ########.fr       */
+/*   Created: 2024/12/14 19:56:55 by abtouait          #+#    #+#             */
+/*   Updated: 2024/12/14 20:02:58 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,6 @@ static int	ft_length(int a)
 	i = 0;
 	if (a == 0)
 		return (1);
-	if (a == -2147483648)
-	{
-		return(11);
-	}
 	if (a < 0)
 	{
 		a = -a;
@@ -36,18 +32,40 @@ static int	ft_length(int a)
 	return (i);
 }
 
-int	ft_print_dec(int nb)
-{	
-	char	*str;
-	int		i;
+static char	*conversion(char *str, int r, int o)
+{
+	int	i;
 
-	str = ft_itoa(nb);
-	i = 0;
-	while (str[i] != '\0')
+	i = o - 1;
+	while (r > 0)
 	{
-		ft_print_putchar(str[i]);
-		i++;
+		str[i] = r % 10 + '0';
+		r = r / 10;
+		i--;
 	}
-	free(str);
-	return (ft_length(nb));
+	return (str);
 }
+
+char	*ft_itoa(int n)
+{
+	char	*new_str;
+	int		o;
+
+	o = ft_length(n);
+	if (n == 0)
+		return (ft_strdup("0"));
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	new_str = malloc((o + 1) * sizeof(char));
+	if (new_str == NULL)
+		return (NULL);
+	if (n < 0)
+	{
+		new_str[0] = '-';
+		n = -n;
+	}
+	conversion(new_str, n, o);
+	new_str[o] = '\0';
+	return (new_str);
+}
+

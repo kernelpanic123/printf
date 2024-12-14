@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_hex_l.c                                   :+:      :+:    :+:   */
+/*   ft_print_hex_u.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/14 16:20:42 by abtouait          #+#    #+#             */
-/*   Updated: 2024/12/14 19:09:03 by abtouait         ###   ########.fr       */
+/*   Created: 2024/12/14 17:49:26 by abtouait          #+#    #+#             */
+/*   Updated: 2024/12/14 19:09:50 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,26 +27,26 @@ static	int	ft_length_hex(int c)
 	return (i);
 }
 
-void	ft_convert_hex_l(unsigned int a)
+void	ft_convert_hex_u(unsigned int b)
 {
-	if (a >= 16)
+	if (b >= 16)
 	{
-		ft_convert_hex_l(a / 16);
-		ft_convert_hex_l(a % 16);
+		ft_convert_hex_u(b / 16);
+		ft_convert_hex_u(b % 16);
 	}
 	else
 	{
-		if (a <= 9)
-			ft_print_unsigned(a);
+		if (b <= 9)
+			ft_print_unsigned(b);
 		else
 		{
-			ft_print_putchar((a - 10 + 'a'));
+			ft_print_putchar((b - 10 + 'A'));
 		}
 	}
 }
 
-int	ft_print_hex_l(unsigned int a)
+int	ft_print_hex_u(unsigned int b)
 {
-	ft_convert_hex_l(a);
-	return (ft_length_hex(a));
+	ft_convert_hex_u(b);
+	return (ft_length_hex(b));
 }

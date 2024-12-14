@@ -1,52 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_hex_l.c                                   :+:      :+:    :+:   */
+/*   ft_print_ptr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/14 16:20:42 by abtouait          #+#    #+#             */
-/*   Updated: 2024/12/14 19:09:03 by abtouait         ###   ########.fr       */
+/*   Created: 2024/12/14 18:56:06 by abtouait          #+#    #+#             */
+/*   Updated: 2024/12/14 19:21:09 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static	int	ft_length_hex(int c)
+int	ft_print_ptr(unsigned long n)
 {
-	size_t	i;
+	int	i;
 
-	i = 0;
-	if (c == 0)
-		return (1);
-	while (c > 0)
+	if (!n)
 	{
-		c = c / 16;
-		i++;
+		write(1, "(nil)", 5);
+		return (5);
 	}
-	return (i);
-}
-
-void	ft_convert_hex_l(unsigned int a)
-{
-	if (a >= 16)
-	{
-		ft_convert_hex_l(a / 16);
-		ft_convert_hex_l(a % 16);
-	}
-	else
-	{
-		if (a <= 9)
-			ft_print_unsigned(a);
-		else
-		{
-			ft_print_putchar((a - 10 + 'a'));
-		}
-	}
-}
-
-int	ft_print_hex_l(unsigned int a)
-{
-	ft_convert_hex_l(a);
-	return (ft_length_hex(a));
+	write(1, "0x", 2);
+	i = ft_print_hex_l(n);
+	return (i + 2);
 }
