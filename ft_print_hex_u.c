@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_hex_u.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
+/*   By: abtouait <abtouait@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 17:49:26 by abtouait          #+#    #+#             */
-/*   Updated: 2024/12/14 19:09:50 by abtouait         ###   ########.fr       */
+/*   Updated: 2024/12/15 13:44:43 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static	int	ft_length_hex(int c)
+static	int	ft_length_hex(unsigned int c)
 {
 	size_t	i;
 
