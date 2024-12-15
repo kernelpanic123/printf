@@ -6,7 +6,7 @@
 /*   By: abtouait <abtouait@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 18:56:06 by abtouait          #+#    #+#             */
-/*   Updated: 2024/12/15 14:13:00 by abtouait         ###   ########.fr       */
+/*   Updated: 2024/12/15 17:43:00 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static	int	ft_length_ptr(unsigned int c)
 {
-	size_t	i;
+	unsigned int	i;
 
 	i = 0;
 	if (c == 0)
