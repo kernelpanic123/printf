@@ -6,13 +6,13 @@
 /*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 19:22:09 by abtouait          #+#    #+#             */
-/*   Updated: 2024/12/16 17:40:34 by abtouait         ###   ########.fr       */
+/*   Updated: 2024/12/16 17:57:43 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_format(va_list *args, const char	format)
+int	ft_format(va_list *args, const char format)
 {
 	int	len;
 
@@ -37,6 +37,7 @@ int	ft_format(va_list *args, const char	format)
 		len += ft_print_poucent();
 	return (len);
 }
+
 int	ft_printf(const char *str, ...)
 {
 	int		i;

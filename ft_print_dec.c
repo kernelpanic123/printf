@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_dec.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abtouait <abtouait@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 15:11:44 by abtouait          #+#    #+#             */
-/*   Updated: 2024/12/15 17:42:35 by abtouait         ###   ########.fr       */
+/*   Updated: 2024/12/16 17:55:56 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	ft_length(int a)
 		return (1);
 	if (a == -2147483648)
 	{
-		return(11);
+		return (11);
 	}
 	if (a < 0)
 	{

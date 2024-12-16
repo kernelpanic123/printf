@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abtouait <abtouait@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 19:56:55 by abtouait          #+#    #+#             */
-/*   Updated: 2024/12/15 13:22:19 by abtouait         ###   ########.fr       */
+/*   Updated: 2024/12/16 17:55:40 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,3 @@ char	*ft_itoa(int n)
 	new_str[o] = '\0';
 	return (new_str);
 }
-

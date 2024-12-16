@@ -6,7 +6,7 @@
 /*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 18:56:06 by abtouait          #+#    #+#             */
-/*   Updated: 2024/12/16 17:49:39 by abtouait         ###   ########.fr       */
+/*   Updated: 2024/12/16 17:56:36 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ static	int	ft_length_ptr(unsigned long int c)
 	}
 	return (i);
 }
+
 void	ft_convert_hex_ptr(unsigned long int a)
 {
 	if (a >= 16)
