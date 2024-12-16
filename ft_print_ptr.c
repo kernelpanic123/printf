@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_ptr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abtouait <abtouait@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 18:56:06 by abtouait          #+#    #+#             */
-/*   Updated: 2024/12/15 17:43:00 by abtouait         ###   ########.fr       */
+/*   Updated: 2024/12/16 17:49:39 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static	int	ft_length_ptr(unsigned int c)
+static	int	ft_length_ptr(unsigned long int c)
 {
 	unsigned int	i;
 
@@ -26,8 +26,25 @@ static	int	ft_length_ptr(unsigned int c)
 	}
 	return (i);
 }
+void	ft_convert_hex_ptr(unsigned long int a)
+{
+	if (a >= 16)
+	{
+		ft_convert_hex_ptr(a / 16);
+		ft_convert_hex_ptr(a % 16);
+	}
+	else
+	{
+		if (a <= 9)
+			ft_print_unsigned(a);
+		else
+		{
+			ft_print_putchar((a - 10 + 'a'));
+		}
+	}
+}
 
-int	ft_print_ptr(unsigned long n)
+int	ft_print_ptr(unsigned long int n)
 {
 	if (!n)
 	{
@@ -35,6 +52,6 @@ int	ft_print_ptr(unsigned long n)
 		return (5);
 	}
 	write(1, "0x", 2);
-	ft_print_hex_l(n);
+	ft_convert_hex_ptr(n);
 	return (ft_length_ptr(n) + 2);
 }

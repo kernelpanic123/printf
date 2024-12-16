@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abtouait <abtouait@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 19:22:09 by abtouait          #+#    #+#             */
-/*   Updated: 2024/12/15 13:19:59 by abtouait         ###   ########.fr       */
+/*   Updated: 2024/12/16 17:40:34 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,3 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (len);
 }
-
-
