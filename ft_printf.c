@@ -6,7 +6,7 @@
 /*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 19:22:09 by abtouait          #+#    #+#             */
-/*   Updated: 2024/12/16 17:57:43 by abtouait         ###   ########.fr       */
+/*   Updated: 2025/01/17 16:13:32 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_format(va_list *args, const char format)
 	else if (format == 'X')
 		len += ft_print_hex_u(va_arg(*args, unsigned int));
 	else if (format == '%')
-		len += ft_print_poucent();
+		len += ft_print_pourcent();
 	return (len);
 }
 

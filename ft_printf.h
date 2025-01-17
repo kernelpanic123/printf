@@ -6,7 +6,7 @@
 /*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 20:20:14 by abtouait          #+#    #+#             */
-/*   Updated: 2024/12/14 20:03:49 by abtouait         ###   ########.fr       */
+/*   Updated: 2025/01/17 16:13:24 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		ft_print_hex_l(unsigned int a);
 int		ft_print_hex_u(unsigned int b);
 int		ft_print_ptr(unsigned long n);
 int		ft_printf(const char *str, ...);
-int		ft_print_poucent(void);
+int		ft_print_pourcent(void);
 char	*ft_itoa(int n);
 char	*ft_strdup(const	char *s1);
 
